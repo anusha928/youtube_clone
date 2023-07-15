@@ -2,8 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sunday/features/splash/ui/screens/splash_screens.dart';
-import 'Dashboard/bloc/video_list_bloc.dart';
-import 'Dashboard/resources/video_repositry.dart';
+import 'core/bloc/video_list_bloc.dart';
+import 'core/resources/video_repositry.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

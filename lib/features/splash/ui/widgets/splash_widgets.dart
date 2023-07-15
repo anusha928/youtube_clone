@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:sunday/Dashboard/ui/screens/navscreen.dart';
-import 'package:sunday/LoginPage/ui/screen/loginpage_screen.dart';
+import 'package:sunday/features/Dashboard/ui/screens/navscreen.dart';
+import 'package:sunday/features/LoginPage/ui/screen/loginpage_screen.dart';
 import 'package:sunday/features/splash/cubit/Startup_cubit.dart';
 import 'package:sunday/features/splash/cubit/startup_state.dart';
-import 'package:sunday/widgets/smalltexts.dart';
+import 'package:sunday/common/widgets/smalltexts.dart';
 
 class SplashWidgets extends StatefulWidget {
   const SplashWidgets({super.key});
@@ -17,7 +17,7 @@ class SplashWidgets extends StatefulWidget {
 class _SplashWidgetsState extends State<SplashWidgets> {
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     context.read<StartupCubit>().fetchInitialData();
   }
@@ -33,7 +33,7 @@ class _SplashWidgetsState extends State<SplashWidgets> {
                   PageTransition(
                       child: LoginPagesScreen(), type: PageTransitionType.fade),
                   (route) => false);
-            }
+           }
             if (state.isLogedin) {
               Navigator.of(context).pushAndRemoveUntil(
                   PageTransition(
